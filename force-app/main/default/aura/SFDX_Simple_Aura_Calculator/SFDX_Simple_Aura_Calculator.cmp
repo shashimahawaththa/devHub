@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <h1 class="header"> This is Simple calculator</h1><br/><br/><br/><br/><br/>
+        <div class="row">
+        <h2 class="header">Basic Input Number 1</h2>
+            <lightning:input aura:id="number1" type="number" name="input1" label="Enter a number" /><br/><br/><br/><br/><br/>
+        <h2 class="header">Basic Input Number 2</h2>
+        <lightning:input aura:id="number2" type="number" name="input2" label="Enter a number" />
+    </div><br/><br/>
+    <!-- Brand variant: Identifies the primary action in a group of buttons -->
+    <lightning:button variant="brand" label="Add" title="Add action" onclick="{! c.myAction }" />
+    <lightning:button variant="brand" label="Sub" title="Sub action" onclick="{! c.myAction }" />
+    <lightning:button variant="brand" label="Multi" title="Multi action" onclick="{! c.myAction }" />
+    
+    <aura:attribute name="result" type="String"/>
+    Result = {!v.result}
+</aura:component>
