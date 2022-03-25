@@ -1,0 +1,11 @@
+<aura:component controller="AccountController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!--Atttributes-->
+    <aura:attribute name="Columns" type="List" />
+    <aura:attribute name="accList" type="Account" />
+   
+    <!-- Handler  This handler will invoke the controller at the load time of the component -->
+    <aura:handler name="init" value="{! this }" action="{!c.getAccountList}" />
+
+    <!--datatable attributes: data, columns, hideCheckboxClumn-->
+    <lightning:datatable data="{!v.accList}" columns="{!v.Columns}" keyField="" hideCheckboxColumn="true" />
+</aura:component>	
