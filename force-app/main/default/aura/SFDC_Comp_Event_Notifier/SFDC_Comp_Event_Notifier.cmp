@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:registerEvent name="SFDX_Component_Example" type="c:SFDX_Component_Example" />
+
+    <lightning:button label="Click here to fire event" onclick="{!c.fireEvent}" />
+
+</aura:component>

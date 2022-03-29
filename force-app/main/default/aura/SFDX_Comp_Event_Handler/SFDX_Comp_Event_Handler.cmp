@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+<aura:attribute name="displayMsg" type="String" default="No Event Yet!" />
+<aura:attribute name="countEvt" type="Integer" default="0" />
+<!-- "cmpEvent" is kind of a keyword specific to compoent event handlers when defining the name tag -->
+<aura:handler name="SFDX_Component_Example" event="c:SFDX_Component_Example" action="{!c.handlerFiredEvent}" />
+<c:SFDC_Comp_Event_Notifier /> <br/>
+
+{!v.displayMsg}  <br/>
+Number of events fired: {!v.countEvt} <br/>
+</aura:component>	
