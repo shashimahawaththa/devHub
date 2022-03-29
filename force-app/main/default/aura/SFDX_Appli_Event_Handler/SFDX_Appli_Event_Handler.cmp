@@ -3,7 +3,7 @@
     <aura:attribute name="countEvt" type="Integer" default="0" />
     <!-- unlike compEvent here for application event, no need to define name for hndler -->
     <aura:handler event="c:SFDX_Application_Event_xample" action="{!c.handlerFiredEvent}" />
-    <aura:handler name="change" value="{!v.displayMsg}" action="{!c.handleSuccess}"/>
+    <aura:handler name="change" value="{!v.countEvt}" action="{!c.handleSuccess}"/>
     {!v.displayMsg}  <br/>
     Number of events fired: {!v.countEvt} <br/>
 </aura:component>	

@@ -10,5 +10,11 @@
     },
     handleSuccess: function(component, event, helper) {
        console.log("Value change detected!!!");
+       
+       component.set('v.displayMsg', "Before Refreshed!!!");
+       $A.get('e.force:refreshView').fire();
+       
+       component.set('v.displayMsg', "After Refreshed!!!");
+       console.log("Refreshed!!!");
     }
 })
